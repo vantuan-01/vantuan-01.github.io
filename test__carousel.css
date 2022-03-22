@@ -6,16 +6,17 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3% 20%;
+  /* background-color: #000; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.container {
+/* .container2 {
   width: 100%;
   height: auto;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   animation: color-change 1s infinite;
-
-}
+} */
 
 .header {
     width: 100%;
@@ -28,7 +29,7 @@ body {
 
 }
 
-.header::before{
+/* .header::before{
     content: "";
     position: absolute;
     width: 500px;
@@ -42,13 +43,15 @@ body {
     background-position: center;
     background-size: cover;
     z-index: -1;
-}
+} */
 
 .header_img{
     width: 170px;
     height: 170px;
     object-fit: cover;
     border-radius: 50%;
+    border: 5px solid;
+    animation: color-change 1s infinite;
 }
 
 .header_info{
@@ -58,9 +61,9 @@ body {
 }
 
 @keyframes color-change {
-    0% { background-color: rgba(255, 0, 0, 0.5); }
-    50% { background-color: rgba(0, 0, 255, 0.5); }
-    100% { background-color: rgba(0, 128, 0, 0.5); }
+    0% { border-color: rgba(255, 0, 0, 0.5); }
+    50% { border-color: rgba(0, 0, 255, 0.5); }
+    100% { border-color: rgba(0, 128, 0, 0.5); }
   }
 
 .header_info_name{
@@ -97,7 +100,7 @@ body {
     z-index: 1;
 }
 
-.body::after{
+/* .body::after{
     content: "";
     position: absolute;
     width: 500px;
@@ -111,7 +114,7 @@ body {
     background-position: center;
     background-size: cover;
     z-index: -1;
-}
+} */
 
 .body_left {
     width: 60%;
@@ -167,3 +170,46 @@ body {
     font-weight: normal;
 }
 
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    /* overflow: hidden; */
+  }
+  
+  .container:before, .container:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+    border-radius: 10px;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .container:after {
+    filter: blur(50px);
+  }
