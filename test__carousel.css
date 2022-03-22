@@ -13,6 +13,7 @@ body {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
+  animation: color-change 1s infinite;
 
 }
 
@@ -27,7 +28,7 @@ body {
 
 }
 
-/* .header::before{
+.header::before{
     content: "";
     position: absolute;
     width: 500px;
@@ -41,7 +42,7 @@ body {
     background-position: center;
     background-size: cover;
     z-index: -1;
-} */
+}
 
 .header_img{
     width: 170px;
@@ -96,7 +97,7 @@ body {
     z-index: 1;
 }
 
-/* .body::after{
+.body::after{
     content: "";
     position: absolute;
     width: 500px;
@@ -110,7 +111,7 @@ body {
     background-position: center;
     background-size: cover;
     z-index: -1;
-} */
+}
 
 .body_left {
     width: 60%;
